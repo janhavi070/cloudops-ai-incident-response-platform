@@ -14,3 +14,6 @@ override.tf.json
 # IDE
 .vscode/
 .idea/
+
+# SSH Keys
+keys/

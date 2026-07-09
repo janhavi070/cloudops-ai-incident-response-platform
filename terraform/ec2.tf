@@ -29,7 +29,7 @@ resource "aws_instance" "web" {
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   user_data = file("${path.module}/userdata.sh")
-  key_name = var.key_pair_name
+  key_name  = aws_key_pair.cloudops.key_name
 
   tags = {
     Name = var.instance_name
